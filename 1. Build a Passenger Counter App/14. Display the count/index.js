@@ -9,4 +9,3 @@ function increment() {
     console.log(count)
 }
 
-
