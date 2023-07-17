@@ -1,9 +1,20 @@
-// javascript
+const num1 = parseInt(document.getElementById("num1-el").value)
+const num2 = parseInt(document.getElementById("num2-el").value)
+const sum = document.getElementById("sum-el")
 
-const count = 0;
-
-console.log(count);
-
-const myAge = 23;
-
-console.log(myAge);
+const add = () =>{
+    const result = num1+num2
+    sum.textContent = "Result "+result
+}
+const sub = () =>{
+    const result = num1-num2
+    sum.textContent = "Result "+result
+}
+const div = () =>{
+    const result = num1/num2
+    sum.textContent = "Result "+result
+}
+const mul = () =>{
+    const result = num1*num2
+    sum.textContent = "Result "+result
+}
