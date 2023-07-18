@@ -1,5 +1,5 @@
-let firstCard = 10
-let secondCard = 4
+let firstCard = Math.floor(Math.random()*9)+2
+let secondCard = Math.floor(Math.random()*9)+2
 let sum = firstCard + secondCard
 let hasBlackJack = false
 let isAlive = true
@@ -27,8 +27,11 @@ function startGame() {
 function newCard() {
     console.log("Drawing a new card from the deck!")
     // 1. Create a card variable, and hard code its value to a number (2-11)
+    let thirdCard = Math.floor(Math.random()*9)+2;
     
     // 2. Add the new card to the sum variable
+    sum+=thirdCard
     
     // 3. Call startGame()
+    startGame()
 }
