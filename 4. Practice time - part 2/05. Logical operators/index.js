@@ -6,3 +6,9 @@ let weekday = "Friday"
 
 
 
+if((new Date().toDateString().indexOf(0) === "Fri" && new Date().toDateString().indexOf(2))==="13"){
+    console.log("😱"); // Spooky Face!
+}
+else{
+    console.log(`Today's date ${dayOfMonth}`);
+}
