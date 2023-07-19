@@ -3,3 +3,12 @@
 // Log out at least two of the keys using the dot notation
 
 
+const airbnb = {
+    army:true,
+    name:"Army",
+    number_of_member:234,
+    teams:["Para","SF","Marcos"]
+}
+
+console.log(airbnb.name);
+console.log(airbnb.teams);

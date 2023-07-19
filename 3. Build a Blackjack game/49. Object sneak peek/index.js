@@ -8,13 +8,13 @@ let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
 let player = {
-    name: "Per",
+    name: "Shahzeb",
     chips: 145
 }
 
 
 let playerEl = document.getElementById("player-el")
-playerEl.textContent = player.name + ": $" + player.chips
+playerEl.textContent = "Player : " +`${player.name} $${player.chips}`
 
 function getRandomCard() {
     let randomNumber = Math.floor( Math.random()*13 ) + 1

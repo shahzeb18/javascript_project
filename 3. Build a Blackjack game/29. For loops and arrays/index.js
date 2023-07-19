@@ -12,5 +12,9 @@ let messages = [
 // console.log(messages[2])
 // console.log(messages[3])
 
+messages.forEach(element => {
+    console.log(element);
+});
+
 
 
