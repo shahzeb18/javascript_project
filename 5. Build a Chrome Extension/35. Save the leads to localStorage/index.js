@@ -6,7 +6,9 @@ const ulEl = document.getElementById("ul-el")
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
-    // Save the myLeads array to localStorage 
+    // Save the myLeads array to localStorage
+    const jsonMyLeads = JSON.stringify(myLeads);
+    localStorage.setItem("myLeads",jsonMyLeads)
     // PS: remember JSON.stringify()
     renderLeads()
     

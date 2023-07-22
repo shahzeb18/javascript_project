@@ -3,22 +3,28 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
-let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
 // 1. Check if leadsFromLocalStorage is truthy
-// 2. If so, set myLeads to its value and call renderLeads()
+// 2. If so, set myLeads to its value and call renderLead()
+
+if(leadsFromLocalStorage){
+    myLeads = leadsFromLocalStorage
+    renderLeads()
+}
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
     renderLeads()
 })
 
 function renderLeads() {
     let listItems = ""
     for (let i = 0; i < myLeads.length; i++) {
-        listItems += `
+        listItems += 
+        `
             <li>
                 <a target='_blank' href='${myLeads[i]}'>
                     ${myLeads[i]}
@@ -26,5 +32,5 @@ function renderLeads() {
             </li>
         `
     }
-    ulEl.innerHTML = listItems  
+    ulEl.innerHTML = listItems
 }
