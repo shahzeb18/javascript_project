@@ -1,6 +1,7 @@
 // The generateSentence(desc, arr) takes two parameterer: a description and an array.
 // It should return a string based upon the description and array.
 
+
 // Example 1: if you pass in "largest countries",and ["China", "India", "USA"],
 // it should return the string: "The 3 largest countries are China, India, USA"
 
@@ -8,6 +9,18 @@
 // "The 2 best fruits are Apples, Bananas"
 
 // Use both a for loop and a template string to solve the challenge
-function generateSentence(desc, arr) {
-    
+let newArr = ""
+
+function generateSentence(desc, arr) { 
+    for (let index = 0; index < arr.length; index++) {
+        if (index === arr.length - 1) {
+            newArr += arr[index]
+        }
+        else{
+            newArr += `${arr[index]}, `
+        }
+    }
+    console.log(`The 2 ${desc} are ${newArr}`);
 }
+
+generateSentence("best fruits", ["Apples", "Bananas"])
